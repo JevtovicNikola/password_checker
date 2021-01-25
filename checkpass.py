@@ -22,7 +22,7 @@ def get_password_leaks_count(hashes, hash_to_check):
             return count
     return 0    
 
-# Prepaes user input for API request and API responce        
+# Prepares user input for API request and API responce        
 def pwned_api_check(password):
     sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
     first5_char, tail = sha1password[:5], sha1password[5:]
